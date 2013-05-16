@@ -1,0 +1,20 @@
+.label{
+	line-height:2em;
+}
+
+body{
+	padding-top:100px;
+}
+.panel{
+	min-height:300px;
+}
+.alone{
+	margin-top:50px;
+}
+select{
+	font-size:0.835em;
+	height: 2.3125em;
+	text-align:center;
+	padding-left:10px;
+	border-radius:0;
+}

@@ -1,0 +1,38 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>Prototipo OAuth2</title>
+	<link rel="stylesheet" href="css/foundation.css" media="all"/>
+	<link rel="stylesheet" href="css/style.css" media="all" />
+  </head>
+<body>
+	<div class="row">
+		<div class="large-6 columns small-11 large-centered small-centered panel text-center">
+			<h3>Hello!</h3>
+			<% if flash[:notice] %>
+			<div class="alert-box"><%= flash[:notice]%></div>
+			<%end%>
+			<form action="/elements/create" method="post" class="row">
+				<p>Add a value, choose a category and create a new element.</p>
+				<div class="large-4 columns">
+				<input type="text" value="0" name="value">
+				</div>
+				<div class="large-4 columns">
+			<select name="category_id" id="category_select">
+				<% @cats["categories"].each do |cat|%>
+	  		<option value="<%= cat["id"]%>"><%= cat["name"] %></option>
+		<%end%>
+	</select>
+	</div><div class="large-4 columns">
+	<input type="submit" class="button radius small" value="Create element">
+	</div>
+	<hr />
+	<div><a href="/logout">Logout from this account</a></div>
+	</div></div>
+	
+</body>
+</html>

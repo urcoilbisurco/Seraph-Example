@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>Prototipo OAuth2</title>
+	<link rel="stylesheet" href="css/foundation.css" media="all"/>
+	<link rel="stylesheet" href="css/style.css" media="all" />
+  </head>
+<body>
+	
+	<% unless session[:access_token]%>
+	<div class="row">
+		<div class="large-6 columns small-10 large-centered small-centered panel text-center">
+			<h3>Welcome!</h3>
+			<h4>Please connect with trackthisforme to continue</h4>
+			<a href="/auth" class="button alone radius">Connect with trackthisforme</a>
+		</div>
+	</div>
+	
+	<% else%>
+	<div class="row">
+		<div class="large-6 columns small-10 large-centered small-centered panel text-center">
+			<h3>Welcome back!</h3>
+			<a href="/categories" class="button alone radius">Create new Element</a>
+			
+			<hr />
+			<div><a href="/logout">Logout from this account</a></div>
+		</div>
+	</div>
+	<% end%>
+<!-- <a href="/auth">Auth</a>
+<br/>
+<a href="/password">Password</a>
+<br/>
+<a href="/implicit">Implicit</a> -->
+
+
+</body>
+</html>
